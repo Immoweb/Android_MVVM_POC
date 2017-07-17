@@ -1,5 +1,6 @@
 package be.ibad.mvvm.view.fragment;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,16 +8,15 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 
 import be.ibad.mvvm.R;
 import be.ibad.mvvm.data.FoodTruckLoader;
+import be.ibad.mvvm.databinding.FragmentListBinding;
 import be.ibad.mvvm.model.Record;
 import be.ibad.mvvm.view.adapter.FoodTruckAdapter;
 
@@ -30,8 +30,7 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     public static final String TAG = ListFragment.class.getCanonicalName();
     private static final int LOADER_ID = 42;
     private FoodTruckAdapter mAdapter;
-    private ProgressBar mProgressBar;
-    private SwipeRefreshLayout mSwipeRefreshLayout;
+    private FragmentListBinding mBinding;
 
     private LoaderManager.LoaderCallbacks<ArrayList<Record>> mFoodLoaderCallBak = new LoaderManager.LoaderCallbacks<ArrayList<Record>>() {
         @Override
@@ -63,29 +62,25 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_list, container, false);
-    }
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_list, container, false);
+        return mBinding.getRoot();    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mBinding.swipeContainer.setOnRefreshListener(this);
+        mBinding.swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
-        mProgressBar = view.findViewById(R.id.progress_indicator);
-        mSwipeRefreshLayout = view.findViewById(R.id.swipe_container);
-        mSwipeRefreshLayout.setOnRefreshListener(this);
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.colorAccent);
-
-        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.hasFixedSize();
-        recyclerView.setAdapter(mAdapter);
+        mBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mBinding.recyclerView.hasFixedSize();
+        mBinding.recyclerView.setAdapter(mAdapter);
 
         getLoaderManager().initLoader(LOADER_ID, null, mFoodLoaderCallBak);
     }
 
     private void showHideLoadingViews(boolean show) {
-        mProgressBar.setVisibility(show ? View.VISIBLE : View.GONE);
-        mSwipeRefreshLayout.setRefreshing(show);
+        mBinding.progressIndicator.setVisibility(show ? View.VISIBLE : View.GONE);
+        mBinding.swipeContainer.setRefreshing(show);
     }
 
     @Override
