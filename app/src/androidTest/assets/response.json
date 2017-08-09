@@ -1,0 +1,290 @@
+{
+  "nhits": 18,
+  "parameters": {
+    "dataset": [
+      "bxl_food_trucks"
+    ],
+    "timezone": "UTC",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "10896a6f5df13590cc203406c17e387776a3c155",
+      "fields": {
+        "emplacement": "Boulevard de l'Imp\u00e9ratrice",
+        "mardi": "Pim Coffee On The Go",
+        "location_in_french": "Boulevard de l'Imp\u00e9ratrice",
+        "location_in_dutch": "Keizerinlaan",
+        "maandag": "Loving Hut",
+        "monday": "Loving Hut",
+        "vendredi": "Non Solo Tiramisu",
+        "locatie": "Keizerinlaan",
+        "tuesday": "Pim Coffee On The Go",
+        "friday": "Non Solo Tiramisu",
+        "wednesday": "Pim Coffee On The Go",
+        "woensdag": "Pim Coffee On The Go",
+        "mercredi": "Pim Coffee On The Go",
+        "coordonnees_wgs84": [
+          50.8477831991208,
+          4.35769647359848
+        ],
+        "jeudi": "Chang Noi",
+        "thursday": "Chang Noi",
+        "dinsdag": "Pim Coffee On The Go",
+        "donderdag": "Chang Noi",
+        "vrijdag": "Non Solo Tiramisu",
+        "lundi": "Loving Hut"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35769647359848,
+          50.8477831991208
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "ed2d41d11d36bc4461c1c55cbd64e7a6c4b5dd98",
+      "fields": {
+        "emplacement": "Boulevard Pach\u00e9co - Boulevard Jardin Botanique",
+        "coordonnees_wgs84": [
+          50.8536271863445,
+          4.36331704258918
+        ],
+        "location_in_dutch": "Pachecolaan - Kruidtuinlaan",
+        "locatie": "Pachecolaan - Kruidtuinlaan",
+        "location_in_french": "Boulevard Pach\u00e9co - Boulevard Jardin Botanique"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.36331704258918,
+          50.8536271863445
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "99e8f5addd209ea1c64f322d38d196842c2e8119",
+      "fields": {
+        "emplacement": "Avenue Franklin Roosevelt",
+        "coordonnees_wgs84": [
+          50.8121863847198,
+          4.37958598136901
+        ],
+        "location_in_dutch": "Franklin Rooseveltlaan",
+        "locatie": "Franklin Rooseveltlaan",
+        "location_in_french": "Avenue Franklin Roosevelt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.37958598136901,
+          50.8121863847198
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "2a79d656892dd957158d0752add637ba0d25fde1",
+      "fields": {
+        "emplacement": "Nouv. march\u00e9 aux grains",
+        "mardi": "Loving Hut",
+        "location_in_french": "Nouv. march\u00e9 aux grains",
+        "tuesday": "Loving Hut",
+        "location_in_dutch": "Nieuwe Graanmarkt",
+        "coordonnees_wgs84": [
+          50.850968314161,
+          4.34500020718633
+        ],
+        "dinsdag": "Loving Hut",
+        "locatie": "Nieuwe Graanmarkt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.34500020718633,
+          50.850968314161
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "65d69dd7d98f6da52e361a37df59c0cbea63e306",
+      "fields": {
+        "emplacement": "Carrefour de l'Europe",
+        "location_in_french": "Carrefour de l'Europe",
+        "maandag": "Langos King",
+        "monday": "Langos King",
+        "location_in_dutch": "Europakruispunt",
+        "coordonnees_wgs84": [
+          50.8457135864305,
+          4.35665041208267
+        ],
+        "lundi": "Langos King",
+        "locatie": "Europakruispunt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35665041208267,
+          50.8457135864305
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "7ad8f901df8ab1a7a79da9a56faffc92ab2962d4",
+      "fields": {
+        "emplacement": "Quai de Willebroeck",
+        "coordonnees_wgs84": [
+          50.8620728111506,
+          4.35152471065521
+        ],
+        "location_in_dutch": "Willebroekkaai",
+        "locatie": "Willebroekkaai",
+        "location_in_french": "Quai de Willebroeck"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35152471065521,
+          50.8620728111506
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "4e962214db7f8f078fbf927f9b8e95f7ba91ee06",
+      "fields": {
+        "zaterdag": "Wooly",
+        "samedi": "Wooly",
+        "location_in_french": "Rue Neuve",
+        "maandag": "Boppin'Burger",
+        "mardi": "Farmily Food",
+        "mercredi": "Non Solo Tiramisu",
+        "tuesday": "Farmily Food",
+        "location_in_dutch": "Nieuwstraat",
+        "emplacement": "Rue Neuve",
+        "wednesday": "Non Solo Tiramisu",
+        "woensdag": "Non Solo Tiramisu",
+        "coordonnees_wgs84": [
+          50.8551004128968,
+          4.35822218656539
+        ],
+        "jeudi": "Okoz",
+        "thursday": "Okoz",
+        "dinsdag": "Farmily Food",
+        "monday": "Boppin'Burger",
+        "donderdag": "Okoz",
+        "locatie": "Nieuwstraat",
+        "saturday": "Wooly",
+        "lundi": "Boppin'Burger"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35822218656539,
+          50.8551004128968
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "834191851e630e94dc3db5a889526a001e617575",
+      "fields": {
+        "emplacement": "Boulevard Simon Bolivar - Chauss\u00e9e d'Anvers",
+        "location_in_french": "Boulevard Simon Bolivar - Chauss\u00e9e d'Anvers",
+        "location_in_dutch": "Simon Bolivarlaan - Antwerpsesteenweg",
+        "maandag": "TOFA",
+        "monday": "TOFA",
+        "vendredi": "Urban Cook",
+        "locatie": "Simon Bolivarlaan - Antwerpsesteenweg",
+        "friday": "Urban Cook",
+        "coordonnees_wgs84": [
+          50.8616167967451,
+          4.35585089225924
+        ],
+        "lundi": "TOFA",
+        "vrijdag": "Urban Cook"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35585089225924,
+          50.8616167967451
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "e10a59d6d4c73258313872c41778d75286e23342",
+      "fields": {
+        "emplacement": "Place de Brouck\u00e8re",
+        "coordonnees_wgs84": [
+          50.8519253939398,
+          4.35329228639602
+        ],
+        "location_in_dutch": "De Brouck\u00e8replein",
+        "locatie": "De Brouck\u00e8replein",
+        "location_in_french": "Place de Brouck\u00e8re"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.35329228639602,
+          50.8519253939398
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    },
+    {
+      "datasetid": "bxl_food_trucks",
+      "recordid": "04971644e1feb73c52e7c2411a8f6d277148b357",
+      "fields": {
+        "emplacement": "Square Fr\u00e8re Orban",
+        "mardi": "Le Vagabon",
+        "location_in_french": "Square Fr\u00e8re Orban",
+        "location_in_dutch": "Fr\u00e8re-Orbansquare",
+        "maandag": "Keep On Toasting",
+        "monday": "Keep On Toasting",
+        "vendredi": "La Mer de Sud",
+        "locatie": "Fr\u00e8re-Orbansquare",
+        "tuesday": "Le Vagabon",
+        "friday": "La Mer de Sud",
+        "wednesday": "Chang Noi",
+        "woensdag": "Chang Noi",
+        "mercredi": "Chang Noi",
+        "coordonnees_wgs84": [
+          50.8436282843606,
+          4.37058448791503
+        ],
+        "jeudi": "Soul Kitch'en Street",
+        "thursday": "Soul Kitch'en Street",
+        "dinsdag": "Le Vagabon",
+        "donderdag": "Soul Kitch'en Street",
+        "vrijdag": "La Mer de Sud",
+        "lundi": "Keep On Toasting"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.37058448791503,
+          50.8436282843606
+        ]
+      },
+      "record_timestamp": "2017-04-03T10:45:04+00:00"
+    }
+  ]
+}
