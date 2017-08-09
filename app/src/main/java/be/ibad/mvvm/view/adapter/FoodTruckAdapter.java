@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import be.ibad.mvvm.R;
 import be.ibad.mvvm.databinding.ItemFoodTruckBinding;
@@ -19,7 +19,7 @@ import be.ibad.mvvm.viewModel.RecordViewModel;
 
 public class FoodTruckAdapter extends RecyclerView.Adapter<FoodTruckAdapter.FoodTruckHolder> {
 
-    private ArrayList<Record> mRecords;
+    private List<Record> mRecords;
 
     @Override
     public FoodTruckAdapter.FoodTruckHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -42,7 +42,7 @@ public class FoodTruckAdapter extends RecyclerView.Adapter<FoodTruckAdapter.Food
         return mRecords == null ? 0 : mRecords.size();
     }
 
-    public void setData(ArrayList<Record> mRecords) {
+    public void setData(List<Record> mRecords) {
         this.mRecords = mRecords;
         notifyDataSetChanged();
     }

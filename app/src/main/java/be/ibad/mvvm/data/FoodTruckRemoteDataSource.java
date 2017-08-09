@@ -9,13 +9,13 @@ import retrofit2.http.Query;
  * All right reserved for Immoweb MVVM_POC
  */
 
-public class FoodTruckReomteDataSource implements FoodTruckService {
+public class FoodTruckRemoteDataSource implements FoodTruckService {
 
     FoodTruckService service = RetrofitHelper.newFoodTruckService();
 
     @Override
     public Call<ResponseOpenData> getAllFoodTruck(@Query("rows") int nbr) {
-        return service.getAllFoodTruck(1000);
+        return service.getAllFoodTruck(nbr);
     }
 
 }

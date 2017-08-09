@@ -10,7 +10,7 @@ import retrofit2.http.Query;
  * All right reserved for Immoweb MVVM_POC
  */
 
-interface FoodTruckService {
+public interface FoodTruckService {
 
     String ENDPOINT = "https://opendata.bruxelles.be/api/records/1.0/";
 
