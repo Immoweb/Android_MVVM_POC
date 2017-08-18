@@ -23,12 +23,11 @@ import retrofit2.mock.NetworkBehavior;
 
 public class RecordViewModelTest extends InstrumentationTestCase {
     private MockRetrofit mockRetrofit;
-    private Retrofit retrofit;
 
     @Override
     public void setUp() throws Exception {
         super.setUp();
-        retrofit = new Retrofit.Builder()
+        Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://test.com")
                 .client(new OkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
@@ -41,19 +40,20 @@ public class RecordViewModelTest extends InstrumentationTestCase {
 
     @SmallTest
     public void testNbrHitsRetrieval() throws Exception {
-
         BehaviorDelegate<FoodTruckService> delegate = mockRetrofit.create(FoodTruckService.class);
         FoodTruckService mockQodService = new MockFoodTruckService(delegate, getInstrumentation().getContext());
 
+        int NBR_ROW = 100;
         //Actual Test
-        Call<ResponseOpenData> quote = mockQodService.getAllFoodTruck(100);
+        Call<ResponseOpenData> quote = mockQodService.getAllFoodTruck(NBR_ROW);
         Response<ResponseOpenData> openDataResponse = quote.execute();
 
         //Asserting response
         Assert.assertTrue(openDataResponse.isSuccessful());
         Assert.assertTrue(openDataResponse.body().getRecords() != null);
-        Assert.assertEquals(100, openDataResponse.body().getNhits());
-
+        Assert.assertEquals(18, openDataResponse.body().getNhits());
+        Assert.assertEquals(NBR_ROW, openDataResponse.body().getParameters().getRows());
+        Assert.assertEquals("Data set check", "bxl_food_trucks", openDataResponse.body().getParameters().getDataset().get(0));
     }
 
 

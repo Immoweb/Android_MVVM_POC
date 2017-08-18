@@ -33,7 +33,7 @@ public class MockFoodTruckService implements FoodTruckService {
     @Override
     public Call<ResponseOpenData> getAllFoodTruck(int nbr) {
         Gson gson = new GsonBuilder().create();
-        String json = null;
+        String json;
         try {
             json = RestServiceTestHelper.getStringFromFile(context, "response.json");
         } catch (Exception e) {
@@ -41,7 +41,7 @@ public class MockFoodTruckService implements FoodTruckService {
             return Calls.failure((IOException) e);
         }
         ResponseOpenData responseOpenData = gson.fromJson(json, ResponseOpenData.class);
-        responseOpenData.setNhits(nbr);
+        responseOpenData.getParameters().setRows(nbr);
         ArrayList<Record> records = new ArrayList<>();
         responseOpenData.setRecords(records);
         return delegate.returningResponse(responseOpenData).getAllFoodTruck(nbr);
