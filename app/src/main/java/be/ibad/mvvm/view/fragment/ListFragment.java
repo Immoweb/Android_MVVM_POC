@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +59,6 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_list, container, false);
-
         return mBinding.getRoot();
     }
 
@@ -69,7 +68,7 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         mBinding.swipeContainer.setOnRefreshListener(this);
         mBinding.swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
-        mBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mBinding.recyclerView.setLayoutManager(new GridLayoutManager(getContext(), getContext().getResources().getInteger(R.integer.nbr_column)));
         mBinding.recyclerView.hasFixedSize();
         mBinding.recyclerView.setAdapter(mAdapter);
 
