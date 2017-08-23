@@ -11,13 +11,13 @@ import be.ibad.mvvm.model.Record;
 
 public interface FoodTruckDataSource {
 
-    void getAllFoodTruck(LoadFoodTruckCallback callback);
+    void getAllFoodTruck(int rows, LoadFoodTruckCallback callback);
 
     interface LoadFoodTruckCallback {
 
         void onTasksLoaded(List<Record> records);
 
-        void onDataNotAvailable();
+        void onDataNotAvailable(String error);
     }
 
 }

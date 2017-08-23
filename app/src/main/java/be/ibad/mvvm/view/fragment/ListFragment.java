@@ -39,8 +39,8 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 }
 
                 @Override
-                public void onDataNotAvailable() {
-                    Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                public void onDataNotAvailable(String s) {
+                    Toast.makeText(getContext(), "Error " + s, Toast.LENGTH_SHORT).show();
                     showHideLoadingViews(false);
                 }
             };
@@ -85,6 +85,6 @@ public class ListFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         showHideLoadingViews(true);
         FoodTruckRepository
                 .getInstance()
-                .getAllFoodTruck(mLoadFoodTruckCallback);
+                .getAllFoodTruck(100, mLoadFoodTruckCallback);
     }
 }

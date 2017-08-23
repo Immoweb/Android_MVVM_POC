@@ -33,22 +33,22 @@ public class FoodTruckRepository implements FoodTruckDataSource {
     }
 
     @Override
-    public void getAllFoodTruck(@NonNull final LoadFoodTruckCallback callback) {
+    public void getAllFoodTruck(int rows, @NonNull final LoadFoodTruckCallback callback) {
         if (mRecords == null) {
-            mDataSource.getAllFoodTruck(500).enqueue(new Callback<ResponseOpenData>() {
+            mDataSource.getAllFoodTruck(rows).enqueue(new Callback<ResponseOpenData>() {
                 @Override
-                public void onResponse(Call<ResponseOpenData> call, Response<ResponseOpenData> response) {
+                public void onResponse(@NonNull Call<ResponseOpenData> call, @NonNull Response<ResponseOpenData> response) {
                     if (response.isSuccessful()) {
                         mRecords = response.body().getRecords();
                         callback.onTasksLoaded(mRecords);
                     } else {
-                        callback.onDataNotAvailable();
+                        callback.onDataNotAvailable(response.code() + ": " + response.message());
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseOpenData> call, Throwable t) {
-                    callback.onDataNotAvailable();
+                    callback.onDataNotAvailable(t.getMessage());
                 }
             });
         } else {

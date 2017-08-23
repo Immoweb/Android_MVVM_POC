@@ -32,7 +32,7 @@ import be.ibad.mvvm.view.activity.DetailActivity;
 
 public class RecordViewModel extends BaseObservable {
 
-    private static final String STATIC_MAPS_IMAGE_SIZED_URL = "https://maps.googleapis.com/maps/api/staticmap?center=%1$s&zoom=18&size=640x320&markers=color:blue%%7C%2$s";
+    private static final String STATIC_MAPS_IMAGE_SIZED_URL = "https://maps.googleapis.com/maps/api/staticmap?center=%1$s&zoom=18&size=640x320&scale=2&markers=color:blue%%7C%2$s";
     private final Context mContext;
     private final Record mRecord;
 
@@ -41,7 +41,7 @@ public class RecordViewModel extends BaseObservable {
         mRecord = record;
     }
 
-    @BindingAdapter({"bind:staticMapUrl"})
+    @BindingAdapter({"loadImage"})
     public static void loadImage(final ImageView view, final String imageUrl) {
         Picasso.with(view.getContext())
                 .load(imageUrl)

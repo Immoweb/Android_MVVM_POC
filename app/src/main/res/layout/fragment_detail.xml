@@ -20,7 +20,7 @@
             android:layout_height="300dp"
             android:contentDescription="@{viewModel.foodTruck}"
             android:scaleType="centerCrop"
-            app:staticMapUrl="@{viewModel.imageUrl}" />
+            app:loadImage="@{viewModel.imageUrl}" />
 
         <TextView
             android:id="@+id/text_street"
